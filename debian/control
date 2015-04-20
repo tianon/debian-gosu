@@ -1,0 +1,19 @@
+Source: gosu
+Section: admin
+Priority: extra
+Maintainer: Tianon Gravi <admwiggin@gmail.com>
+Uploaders: Docker Packaging Team <docker-maint@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), dh-golang, golang-docker-dev (>= 1.5.0~), golang-go
+Standards-Version: 3.9.6
+Homepage: https://github.com/tianon/gosu
+Vcs-Git: git://anonscm.debian.org/pkg-go/packages/gosu.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/gosu.git
+
+Package: gosu
+Architecture: linux-any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Built-Using: ${misc:Built-Using}
+Description: TODO
+ TODO
+ .
+ This package contains the conversion binary.

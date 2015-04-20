@@ -1,0 +1,5 @@
+*.debhelper.log
+*.substvars
+gosu/
+golang-gosu-dev/
+files

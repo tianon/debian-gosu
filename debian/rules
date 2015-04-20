@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+export DH_GOPKG := github.com/tianon/gosu
+#export DH_GOLANG_INSTALL_ALL := 1
+
+override_dh_auto_install:
+	dh_auto_install
+	
+	# we don't want the golang source (yet?)
+	rm -r debian/gosu/usr/share/gocode
+	
+	# also, the binary needs to go into sbin, not bin
+	test -d debian/gosu/usr/bin -a ! -d debian/gosu/usr/sbin
+	mv debian/gosu/usr/bin debian/gosu/usr/sbin
+
+%:
+	dh $@ --buildsystem=golang --with=golang
