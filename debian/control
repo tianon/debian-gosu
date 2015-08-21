@@ -3,7 +3,10 @@ Section: admin
 Priority: extra
 Maintainer: Tianon Gravi <tianon@debian.org>
 Uploaders: Docker Packaging Team <docker-maint@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 9), dh-golang, golang-docker-dev (>= 1.5.0~), golang-go
+Build-Depends: debhelper (>= 9),
+               dh-golang,
+               golang-docker-dev (>= 1.5.0~),
+               golang-go
 Standards-Version: 3.9.6
 Homepage: https://github.com/tianon/gosu
 Vcs-Git: git://anonscm.debian.org/pkg-go/packages/gosu.git
