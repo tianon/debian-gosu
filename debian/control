@@ -1,8 +1,8 @@
 Source: gosu
 Section: admin
 Priority: extra
-Maintainer: Tianon Gravi <tianon@debian.org>
-Uploaders: Docker Packaging Team <docker-maint@lists.alioth.debian.org>
+Maintainer: pkg-go <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Tianon Gravi <tianon@debian.org>
 Build-Depends: debhelper (>= 9),
                dh-golang,
                golang-docker-dev (>= 1.5.0~),
@@ -11,6 +11,7 @@ Standards-Version: 3.9.6
 Homepage: https://github.com/tianon/gosu
 Vcs-Git: git://anonscm.debian.org/pkg-go/packages/gosu.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/gosu.git
+XS-Go-Import-Path: github.com/tianon/gosu
 
 Package: gosu
 Architecture: linux-any
