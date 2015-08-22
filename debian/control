@@ -1,0 +1,36 @@
+Source: gosu
+Section: admin
+Priority: extra
+Maintainer: pkg-go <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Tianon Gravi <tianon@debian.org>
+Build-Depends: debhelper (>= 9),
+               dh-golang,
+               golang-docker-dev (>= 1.5.0~),
+               golang-go
+Standards-Version: 3.9.6
+Homepage: https://github.com/tianon/gosu
+Vcs-Git: git://anonscm.debian.org/pkg-go/packages/gosu.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/gosu.git
+XS-Go-Import-Path: github.com/tianon/gosu
+
+Package: gosu
+Architecture: linux-any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Built-Using: ${misc:Built-Using}
+Description: Simple Go-based setuid+setgid+setgroups+exec
+ This is a simple tool grown out of the simple fact that "su" and "sudo" have
+ very strange and often annoying TTY and signal-forwarding behavior. They're
+ also somewhat complex to setup and use (especially in the case of "sudo"),
+ which allows for a great deal of expressivity, but falls flat if all you need
+ is "run this specific application as this specific user and get out of the
+ pipeline".
+ .
+ The core of how "gosu" works is stolen directly from how Docker/libcontainer
+ itself starts an application inside a container (and in fact, is using the
+ "/etc/passwd" processing code directly from libcontainer's codebase).
+ .
+ Once the user/group is processed, we switch to that user, then we "exec" the
+ specified process and "gosu" itself is no longer resident or involved in the
+ process lifecycle at all. This avoids all the issues of signal passing and TTY,
+ and punts them to the process invoking "gosu" and the process being invoked by
+ "gosu", where they belong.
