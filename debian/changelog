@@ -1,5 +1,5 @@
-gosu (1.4-1) UNRELEASED; urgency=low
+gosu (1.4-1) unstable; urgency=low
 
   * Initial release (Closes: #796477).
 
- -- Tianon Gravi <tianon@debian.org>  Mon, 20 Apr 2015 10:16:10 -0600
+ -- Tianon Gravi <tianon@debian.org>  Sat, 05 Sep 2015 07:08:06 -0700
