@@ -1,3 +1,9 @@
+gosu (1.5-1) UNRELEASED; urgency=medium
+
+  * Update to 1.5 upstream release
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 25 Sep 2015 16:42:41 -0700
+
 gosu (1.4-1) unstable; urgency=low
 
   * Initial release (Closes: #796477).
