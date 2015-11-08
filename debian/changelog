@@ -1,8 +1,8 @@
-gosu (1.7-1) UNRELEASED; urgency=medium
+gosu (1.7-1) unstable; urgency=medium
 
   * Update to 1.7 upstream release (Closes: #804469)
 
- -- Tianon Gravi <tianon@debian.org>  Sun, 08 Nov 2015 13:09:00 -0800
+ -- Tianon Gravi <tianon@debian.org>  Sun, 08 Nov 2015 13:23:18 -0800
 
 gosu (1.6-1) unstable; urgency=medium
 
